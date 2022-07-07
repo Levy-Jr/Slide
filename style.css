@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*aqui eu seto uma largura e altura para o slide e com o overflow: hidden, tudo que passar dessa altura ou largura será completamente escondido da tela.*/
+.slide {
+  box-shadow: 4px 4px 8px #000;
+  overflow: hidden;
+  width: 711px;
+  height: 400px;
+}
+
+/*no container, onde as imagens estão, eu adiciono um display flex para deixar as imagens em linha (uma do lado da outra) e deixo transform já setado como padrão pra eu mexer no js futuramente*/
+.container {
+  display: flex;
+  transform: translateX(0px);
+  transition: .7s ease-in-out;
+}
+
+/*aqui eu seto uma largura e altura nas imagens do slide, que estão dentro do container*/
+.container img {
+  width: 800px;
+  height: 400px;
+}
+/*esse position: absolute serve para deixar o botão no lugar que eu quiser na tela, sem interferir em nada no slide e em outros elementos.*/
+.buttons {
+  position: absolute;
+}
+
+.buttons
+.previous, 
+.next {
+  border: 0;
+  border-radius: 15px;
+  padding: 7px 14px;
+  background-color: rgb(43, 226, 70);
+  color: #000;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.buttons
+.previous:hover, 
+.next:hover {
+  background-color: #000;
+  color: rgb(43, 226, 70);
+}
+
+.previous {
+  margin-right: 500px;
+}
